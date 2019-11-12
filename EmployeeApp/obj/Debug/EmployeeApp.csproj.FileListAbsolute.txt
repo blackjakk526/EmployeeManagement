@@ -1,0 +1,14 @@
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\bin\Debug\EmployeeApp.exe.config
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\bin\Debug\EmployeeApp.exe
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\bin\Debug\EmployeeApp.pdb
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.csprojAssemblyReference.cache
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\MainWindow.g.cs
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\App.g.cs
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp_MarkupCompile.cache
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp_MarkupCompile.lref
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\MainWindow.baml
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.g.resources
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.Properties.Resources.resources
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.csproj.GenerateResource.cache
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.exe
+C:\Users\ago\source\repos\EmployeeApp\EmployeeApp\obj\Debug\EmployeeApp.pdb
