@@ -1,0 +1,24 @@
+{
+  "Employees" : [
+    {
+      "id": "1",
+      "FirstName": "Alan",
+      "LastName": "Gounley",
+      "LogId": "agounley",
+      "Birthday": "05/26",
+      "Email": "agounley@gmail.com",
+      "Phone": "7176507175",
+      "AccessLevel": "Super"
+    },
+    {
+      "id": "2",
+      "FirstName": "Boo",
+      "LastName": "Hadley",
+      "LogId": "bhadley",
+      "Birthday": "10/31",
+      "Email": "bhadley@gmail.com",
+      "Phone": "7171234567",
+      "AccessLevel": "Super"
+    }
+  ]
+}
