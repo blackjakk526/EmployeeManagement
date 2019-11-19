@@ -23,5 +23,11 @@ namespace EmployeeApp
         {
             InitializeComponent();
         }
+
+        public Window1(Employee e)
+        {
+            InitializeComponent();
+
+        }
     }
 }

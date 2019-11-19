@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\ago\source\repos\EmployeeManagement\EmployeeApp\obj\Debug\
+C:\Users\ago\source\repos\EmployeeManagement\EmployeeApp\obj\Release\
 EmployeeApp
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\ago\source\repos\EmployeeManagement\EmployeeApp\App.xaml
 2462529049
 
@@ -16,5 +16,5 @@ C:\Users\ago\source\repos\EmployeeManagement\EmployeeApp\App.xaml
 14-1295237395
 MainWindow.xaml;Window1.xaml;
 
-False
+True
 

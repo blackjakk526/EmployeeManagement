@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace EmployeeApp
 {
@@ -24,16 +25,17 @@ namespace EmployeeApp
         public MainWindow()
         {
             InitializeComponent();
+           
             a = ((App)Application.Current).employeeList;
+            Debug.WriteLine(a[0].FirstName);
             for (int i = 0; i < a.Count; i++)
             {
-
+                NameBox.Items.Add(a[i].FirstName + " " + a[i].LastName);
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            a = ((App)Application.Current).employeeList;
 
         }
     }

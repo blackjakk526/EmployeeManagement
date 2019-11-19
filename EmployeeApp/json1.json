@@ -1,7 +1,7 @@
 {
   "Employees" : [
     {
-      "id": "1",
+      "Id": "1",
       "FirstName": "Alan",
       "LastName": "Gounley",
       "LogId": "agounley",
@@ -11,7 +11,7 @@
       "AccessLevel": "Super"
     },
     {
-      "id": "2",
+      "Id": "2",
       "FirstName": "Boo",
       "LastName": "Hadley",
       "LogId": "bhadley",
