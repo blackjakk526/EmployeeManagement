@@ -56,5 +56,10 @@ namespace EmployeeApp
             }
             return false;
         }
+
+        public string[] getAccessItems()
+        {
+            return access;
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace EmployeeApp
             InitializeComponent();
            
             a = ((App)Application.Current).employeeList;
-            Debug.WriteLine(a[0].FirstName);
+            //Debug.WriteLine(a[0].FirstName);
             for (int i = 0; i < a.Count; i++)
             {
                 NameBox.Items.Add(a[i].FirstName + " " + a[i].LastName);
@@ -37,6 +37,14 @@ namespace EmployeeApp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void NameBox_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Debug.WriteLine("I made it here");
+            Window1 select = new Window1(a[1]);
+            select.Show();
+            this.Close();
         }
     }
 }

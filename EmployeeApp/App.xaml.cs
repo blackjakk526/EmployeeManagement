@@ -32,7 +32,7 @@ namespace EmployeeApp
                 JObject employees = JObject.Parse(json);
                 JArray array = (JArray)employees["Employees"];
                 employeeList = array.ToObject<List<Employee>>();
-                Debug.WriteLine(employeeList[1].FirstName);
+                //Debug.WriteLine(employeeList[1].FirstName);
             }
         }
     }

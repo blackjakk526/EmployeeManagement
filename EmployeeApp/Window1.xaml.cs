@@ -27,7 +27,15 @@ namespace EmployeeApp
         public Window1(Employee e)
         {
             InitializeComponent();
-
+            FirstName.Text = e.FirstName;
+            LastName.Text = e.LastName;
+            LoginId.Text = e.LogId;
+            Birthday.Text = e.Birthday;
+            Email.Text = e.Email;
+            Phone.Text = e.Phone;
+            Access.ItemsSource = e.getAccessItems();
+            Access.SelectedItem = e.AccessLevel;
+            
         }
     }
 }
