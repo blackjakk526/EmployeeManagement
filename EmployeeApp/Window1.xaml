@@ -16,8 +16,8 @@
         <ComboBox x:Name="Access" HorizontalAlignment="Left" Height="24" Margin="314,257,0,0" VerticalAlignment="Top" Width="134"/>
         <TextBlock HorizontalAlignment="Left" Height="23" Margin="10,186,0,0" TextWrapping="Wrap" Text="Login Identifier" VerticalAlignment="Top" Width="87"/>
         <TextBlock HorizontalAlignment="Left" Margin="343,225,0,0" TextWrapping="Wrap" Text="Access Level" VerticalAlignment="Top" Width="77"/>
-        <Button x:Name="OkButton" Content="OK" HorizontalAlignment="Left" Height="65" Margin="119,322,0,0" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.517,0.498"/>
-        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Height="65" Margin="458,322,0,0" VerticalAlignment="Top" Width="154"/>
+        <Button x:Name="OkButton" Content="OK" HorizontalAlignment="Left" Height="65" Margin="119,322,0,0" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.517,0.498" Click="OkButton_Click"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Height="65" Margin="458,322,0,0" VerticalAlignment="Top" Width="154" Click="CancelButton_Click"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="17" Margin="10,60,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="104"/>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="23" Margin="10,125,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="104"/>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="23" Margin="503,60,0,0" TextWrapping="Wrap" Text="Birthday (MM/DD)" VerticalAlignment="Top" Width="139"/>

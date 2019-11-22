@@ -36,15 +36,26 @@ namespace EmployeeApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Window1 select = new Window1();
+            select.Show();
+            this.Close();
         }
 
         private void NameBox_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Debug.WriteLine("I made it here");
-            Window1 select = new Window1(a[1]);
-            select.Show();
-            this.Close();
+            //Debug.WriteLine("I made it here");
+            if (NameBox.SelectedItem != null) {
+                string[] name = NameBox.SelectedItem.ToString().Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                Employee employee = ((App)Application.Current).GetEmployee(name[0], name[1]);
+                Window1 select = new Window1(employee);
+                select.Show();
+                this.Close();
+            }
+        }
+
+        private void Button_Click_Edit(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

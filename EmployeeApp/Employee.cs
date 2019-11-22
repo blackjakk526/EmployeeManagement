@@ -9,7 +9,6 @@ namespace EmployeeApp
     public class Employee
     {
         private string fname, lname, logId, birthDay, email, phone, accessLevel;
-        readonly string[] access = new string[] { "Standard", "Experienced", "Advanced", "Administrator", "Super" };
 
         public string LastName { get => lname; set => lname = value; }
         public string LogId { get => logId; set => logId = value; }
@@ -35,31 +34,7 @@ namespace EmployeeApp
             Birthday = birth;
             Email = emailAdd;
             Phone = phoneNum;
-            if (Check(accessLev))
-            {
-                AccessLevel = accessLev;
-            }
-            else
-            {
-                AccessLevel = "Standard";
-            }
-        }
-
-        private bool Check(string a)
-        {
-            for(int i = 0; i < access.Length; i++)
-            {
-                if (access[i].CompareTo(a) == 0)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public string[] getAccessItems()
-        {
-            return access;
+            AccessLevel = accessLev;
         }
     }
 }

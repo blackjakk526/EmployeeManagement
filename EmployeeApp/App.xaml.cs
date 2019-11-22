@@ -18,6 +18,7 @@ namespace EmployeeApp
     public partial class App : Application
     {
         public List<Employee> employeeList = new List<Employee>();
+        public string[] access = new string[] { "Standard", "Experienced", "Advanced", "Administrator", "Super" };
 
         public App()
         {
@@ -34,6 +35,24 @@ namespace EmployeeApp
                 employeeList = array.ToObject<List<Employee>>();
                 //Debug.WriteLine(employeeList[1].FirstName);
             }
+        }
+
+        public Employee GetEmployee(string fname, string lname)
+        {
+            foreach(Employee e in employeeList)
+            {
+                if(string.Compare(e.FirstName, fname) == 0 && string.Compare(e.LastName, lname) == 0)
+                {
+                    return e;
+                }
+            }
+
+            return null;
+        }
+
+        public void AddEmployee(Employee e)
+        {
+
         }
     }
 }

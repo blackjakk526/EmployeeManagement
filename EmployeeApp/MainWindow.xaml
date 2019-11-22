@@ -9,7 +9,7 @@
     <Grid>
         <ListBox x:Name="NameBox" HorizontalAlignment="Left" Height="253" Margin="31,22,0,0" VerticalAlignment="Top" Width="463" MouseDoubleClick="NameBox_MouseDoubleClick"/>
         <Button Content="Add " HorizontalAlignment="Left" Height="33" Margin="573,23,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click"/>
-        <Button Content="Edit " HorizontalAlignment="Left" Height="33" Margin="573,69,0,0" VerticalAlignment="Top" Width="126"/>
+        <Button Content="Edit " HorizontalAlignment="Left" Height="33" Margin="573,69,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_Edit"/>
         <Button Content="Delete" HorizontalAlignment="Left" Height="33" Margin="573,113,0,0" VerticalAlignment="Top" Width="126"/>
 
     </Grid>

@@ -10,7 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Windows.Shapes; 
 
 namespace EmployeeApp
 {
@@ -22,6 +22,7 @@ namespace EmployeeApp
         public Window1()
         {
             InitializeComponent();
+            Access.ItemsSource = ((App)Application.Current).access;
         }
 
         public Window1(Employee e)
@@ -33,9 +34,20 @@ namespace EmployeeApp
             Birthday.Text = e.Birthday;
             Email.Text = e.Email;
             Phone.Text = e.Phone;
-            Access.ItemsSource = e.getAccessItems();
+            Access.ItemsSource = ((App)Application.Current).access;
             Access.SelectedItem = e.AccessLevel;
             
         }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow select = new MainWindow();
+            select.Show();
+            this.Close();
+        }
+
+        private void OkButton_Click(object sender, RoutedEventArgs e)
+        {
+            
     }
 }
