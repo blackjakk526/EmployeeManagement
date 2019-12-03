@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmployeeApp"
         mc:Ignorable="d"
-        Title="Employee Information" Height="450" Width="800">
+        Title="Employee Information" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" RenderTransformOrigin="0.502,0.433">
-        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="119,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.491,0.504"/>
-        <TextBox x:Name="LastName" HorizontalAlignment="Left" Height="23" Margin="119,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.498,0.537"/>
+        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="119,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.491,0.504" TextChanged="Name_TextChanged"/>
+        <TextBox x:Name="LastName" HorizontalAlignment="Left" Height="23" Margin="119,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.498,0.537" TextChanged="Name_TextChanged"/>
         <TextBox x:Name="LoginId" HorizontalAlignment="Left" Height="23" Margin="119,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.501,0.47"/>
         <TextBox x:Name="Birthday" HorizontalAlignment="Left" Height="23" Margin="647,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.501,0.47"/>
         <TextBox x:Name="Email" HorizontalAlignment="Left" Height="23" Margin="647,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="1.563,-0.033"/>
@@ -23,6 +24,8 @@
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="23" Margin="503,60,0,0" TextWrapping="Wrap" Text="Birthday (MM/DD)" VerticalAlignment="Top" Width="139"/>
         <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="23" Margin="503,124,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="132"/>
         <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="22" Margin="503,186,0,0" TextWrapping="Wrap" Text="Phone" VerticalAlignment="Top" Width="139"/>
+        <TextBox x:Name="ID" HorizontalAlignment="Left" Height="22" Margin="319,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" RenderTransformOrigin="0.489,0.511" IsReadOnly="True"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="20" Margin="364,13,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.538,0.463"/>
 
     </Grid>
 </Window>

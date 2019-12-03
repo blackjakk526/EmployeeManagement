@@ -27,6 +27,8 @@ namespace EmployeeApp
             InitializeComponent();
            
             a = ((App)Application.Current).employeeList;
+            Sort.ItemsSource = ((App)Application.Current).sort;
+            Parameters.ItemsSource = ((App)Application.Current).search;
             //Debug.WriteLine(a[0].FirstName);
             for (int i = 0; i < a.Count; i++)
             {
@@ -55,7 +57,32 @@ namespace EmployeeApp
 
         private void Button_Click_Edit(object sender, RoutedEventArgs e)
         {
+            if(NameBox.SelectedItem != null)
+            {
+                string[] name = NameBox.SelectedItem.ToString().Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                Employee employee = ((App)Application.Current).GetEmployee(name[0], name[1]);
+                Window1 select = new Window1(employee);
+                select.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please select a name from the list to edit", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
 
+        private void Button_Click_Delete(object sender, RoutedEventArgs e)
+        {
+            if(NameBox.SelectedItem != null)
+            {
+                string[] name = NameBox.SelectedItem.ToString().Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                ((App)Application.Current).DeleteEmployee(name[0], name[1]);
+                NameBox.Items.Remove(NameBox.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Please select a name from the list to delete", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }

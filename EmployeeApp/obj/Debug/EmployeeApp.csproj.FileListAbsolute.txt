@@ -50,3 +50,4 @@ C:\Users\ago\Source\Repos\EmployeeManagement\EmployeeApp\obj\Debug\EmployeeApp.c
 C:\Users\ago\Source\Repos\EmployeeManagement\EmployeeApp\obj\Debug\EmployeeApp.csproj.CopyComplete
 C:\Users\ago\Source\Repos\EmployeeManagement\EmployeeApp\obj\Debug\EmployeeApp.exe
 C:\Users\ago\Source\Repos\EmployeeManagement\EmployeeApp\obj\Debug\EmployeeApp.pdb
+C:\Users\ago\Source\Repos\EmployeeManagement\EmployeeApp\obj\Debug\App.baml

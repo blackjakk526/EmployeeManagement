@@ -19,6 +19,9 @@ namespace EmployeeApp
     {
         public List<Employee> employeeList = new List<Employee>();
         public string[] access = new string[] { "Standard", "Experienced", "Advanced", "Administrator", "Super" };
+        public string[] search = new string[] { "Name", "LogID", "Birthday", "Identifier", "Phone Number", "Email" };
+        public string[] sort = new string[] { "Last Name", "First Name", "Identifier" };
+        public int count { get; set; }
 
         public App()
         {
@@ -27,10 +30,11 @@ namespace EmployeeApp
 
         void LoadJson()
         {
-            using(StreamReader r = new StreamReader("../../json1.json"))
+            using(StreamReader r = new StreamReader("../../json2.json"))
             {
                 string json = r.ReadToEnd();
                 JObject employees = JObject.Parse(json);
+                count = (int)employees["count"];
                 JArray array = (JArray)employees["Employees"];
                 employeeList = array.ToObject<List<Employee>>();
                 //Debug.WriteLine(employeeList[1].FirstName);
@@ -52,7 +56,19 @@ namespace EmployeeApp
 
         public void AddEmployee(Employee e)
         {
+            employeeList.Add(e);
+            count++;
+        }
 
+        public void DeleteEmployee(string fname, string lname)
+        {
+            employeeList.Remove(GetEmployee(fname, lname));
+        }
+
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+            string c = "{ \"count\": " + count + ", \"Employees\": ";
+            File.WriteAllText("../../json2.json", c + JsonConvert.SerializeObject(employeeList) + " }");
         }
     }
 }

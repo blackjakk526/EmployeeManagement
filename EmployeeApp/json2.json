@@ -1,0 +1,1 @@
+{ "count": 3, "Employees": [{"LastName":"Gounley","LogId":"agounley","Birthday":"05/26","Email":"agounley@gmail.com","Phone":"7176507175","AccessLevel":"Super","FirstName":"Alan","Id":1},{"LastName":"Hadley","LogId":"bhadley","Birthday":"10/31","Email":"bhadley@gmail.com","Phone":"7171234567","AccessLevel":"Advanced","FirstName":"Boo","Id":2}] }
