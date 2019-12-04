@@ -27,6 +27,7 @@ namespace EmployeeApp
             ID.Text = ((App)Application.Current).count.ToString();
         }
 
+        //sets a window with the employee object to access in other functions
         public Window1(Employee e)
         {
             InitializeComponent();
@@ -43,6 +44,7 @@ namespace EmployeeApp
             
         }
 
+        //returns back to the previous window
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow select = new MainWindow();
@@ -50,12 +52,15 @@ namespace EmployeeApp
             this.Close();
         }
 
+        //updates or adds an employee based on if the window was created with an employee object
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
+            //if employee object is null then all information is treated as a new employee
             if(empty == null)
             {
                 ((App)Application.Current).AddEmployee(new Employee(Int32.Parse(ID.Text), FirstName.Text, LastName.Text, LoginId.Text, Birthday.Text, Email.Text, Phone.Text, Access.Text));
             }
+            //if employee object is used then will update the information
             else
             {
                 if(empty.FirstName != FirstName.Text)
@@ -88,6 +93,7 @@ namespace EmployeeApp
             this.Close();
         }
 
+        //auto fills the login identifier with the first letter of first name and the last name
         private void Name_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (FirstName.Text.Length < 1)

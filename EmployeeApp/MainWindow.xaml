@@ -18,6 +18,7 @@
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="21" Margin="573,169,0,0" TextWrapping="Wrap" Text="Sort By:" VerticalAlignment="Top" Width="47"/>
         <ComboBox x:Name="Parameters" HorizontalAlignment="Left" Height="37" Margin="322,364,0,0" VerticalAlignment="Top" Width="156" />
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="20" Margin="323,339,0,0" TextWrapping="Wrap" Text="Parameters" VerticalAlignment="Top" Width="60"/>
+        <Label x:Name="Author_Information" Content="Author Information" HorizontalAlignment="Left" Height="26" Margin="593,375,0,0" VerticalAlignment="Top" Width="128" MouseDoubleClick="Info_MouseDoubleClick"/>
 
     </Grid>
 </Window>

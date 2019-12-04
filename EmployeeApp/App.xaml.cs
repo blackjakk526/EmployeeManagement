@@ -23,11 +23,13 @@ namespace EmployeeApp
         public string[] sort = new string[] { "Last Name", "First Name", "ID" };
         public int count { get; set; }
 
+        //reads in json file when application opens
         public App()
         {
             LoadJson();
         }
 
+        //reads in the json file with the employee data
         void LoadJson()
         {
             using(StreamReader r = new StreamReader("../../json2.json"))
@@ -41,10 +43,12 @@ namespace EmployeeApp
             }
         }
 
+        //returns the employee object when given the arguments of the first and last name of employee, returns null if not found
         public Employee GetEmployee(string fname, string lname)
         {
             foreach(Employee e in employeeList)
             {
+                //checks for a match 
                 if(string.Compare(e.FirstName, fname) == 0 && string.Compare(e.LastName, lname) == 0)
                 {
                     return e;
@@ -54,23 +58,27 @@ namespace EmployeeApp
             return null;
         }
 
+        //adds employee to the list which is the main list object with all the employee data
         public void AddEmployee(Employee e)
         {
             employeeList.Add(e);
             count++;
         }
 
+        //deletes employee from the main list
         public void DeleteEmployee(string fname, string lname)
         {
             employeeList.Remove(GetEmployee(fname, lname));
         }
 
+        //saves the list of employees as well as the count as a json file to store
         private void Application_Exit(object sender, ExitEventArgs e)
         {
             string c = "{ \"count\": " + count + ", \"Employees\": ";
             File.WriteAllText("../../json2.json", c + JsonConvert.SerializeObject(employeeList, Formatting.Indented) + " }");
         }
 
+        //searchs for the employee/employees when given a search criteria area and text that is being searched in that area
         public List<Employee> Search(string parameter, string criteria, List<Employee> sorted)
         {
             List<Employee> searchList = new List<Employee>();
@@ -79,7 +87,8 @@ namespace EmployeeApp
                 switch (criteria)
                 {
                     case "Name":
-                        if (e.FirstName.Contains(parameter) || e.LastName.Contains(parameter)){
+                        string name = e.FirstName + " " + e.LastName;
+                        if (name.ToLower().Contains(parameter.ToLower())){
                             searchList.Add(e);
                         }
                         break;
@@ -96,7 +105,7 @@ namespace EmployeeApp
                         }
                         break;
                     case "Login Identifier":
-                        if (e.LogId.Contains(parameter))
+                        if (e.LogId.ToLower().Contains(parameter.ToLower()))
                         {
                             searchList.Add(e);
                         }
@@ -108,19 +117,21 @@ namespace EmployeeApp
                         }
                         break;
                     case "Email":
-                        if (e.Email.Contains(parameter))
+                        if (e.Email.ToLower().Contains(parameter.ToLower()))
                         {
                             searchList.Add(e);
                         }
                         break;
                     default:
-                        Debug.WriteLine(employeeList[1].FirstName);
+                        Debug.WriteLine("Wrong information sent");
                         break;
                 }
             }
 
             return searchList;
         }
+
+        //sorts the list on the window by the given combobox criteria
         public List<Employee> Sort(List<Employee> unsort, string criteria)
         {
             List<Employee> sort;
@@ -129,6 +140,7 @@ namespace EmployeeApp
             bool unsorted = true;
             sort = unsort;
 
+            //sorts by first name when selected 
             if (criteria.Equals("First Name"))
             {
                 while (unsorted)
@@ -136,7 +148,7 @@ namespace EmployeeApp
                     unsorted = false;
                     for (int i = 0; i < sort.Count - 1; i++)
                     {
-                        
+                        //combines first and last name to improve efficiency 
                         flname = sort[i].FirstName + sort[i].LastName;
                         if (flname.CompareTo(sort[i + 1].FirstName + sort[i + 1].LastName) > 0)
                         {
@@ -148,6 +160,7 @@ namespace EmployeeApp
                     }
                 }
             }
+            //sorts by last name when selected in combobox
             else if(criteria.Equals("Last Name"))
             {
                 while (unsorted)
@@ -155,7 +168,7 @@ namespace EmployeeApp
                     unsorted = false;
                     for (int i = 0; i < sort.Count - 1; i++)
                     {
-                        
+                        //combines the last name with the first (in that order) to improve efficiency
                         lfname = sort[i].LastName + sort[i].FirstName;
                         if (lfname.CompareTo(sort[i + 1].LastName + sort[i + 1].FirstName) > 0)
                         {
@@ -167,6 +180,7 @@ namespace EmployeeApp
                     }
                 }
             }
+            //sorts by Id given by the system when employee was added.
             else
             {
                 while (unsorted)
