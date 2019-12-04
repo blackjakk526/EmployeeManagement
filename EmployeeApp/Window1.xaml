@@ -11,9 +11,9 @@
         <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="23" Margin="119,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.491,0.504" TextChanged="Name_TextChanged"/>
         <TextBox x:Name="LastName" HorizontalAlignment="Left" Height="23" Margin="119,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.498,0.537" TextChanged="Name_TextChanged"/>
         <TextBox x:Name="LoginId" HorizontalAlignment="Left" Height="23" Margin="119,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.501,0.47"/>
-        <TextBox x:Name="Birthday" HorizontalAlignment="Left" Height="23" Margin="647,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.501,0.47"/>
-        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="23" Margin="647,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="1.563,-0.033"/>
-        <TextBox x:Name="Phone" HorizontalAlignment="Left" Height="23" Margin="647,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109" RenderTransformOrigin="0.501,0.47"/>
+        <TextBox x:Name="Birthday" HorizontalAlignment="Left" Height="23" Margin="635,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" RenderTransformOrigin="0.501,0.47"/>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Height="23" Margin="561,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" RenderTransformOrigin="1.563,-0.033"/>
+        <TextBox x:Name="Phone" HorizontalAlignment="Left" Height="23" Margin="635,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" RenderTransformOrigin="0.501,0.47"/>
         <ComboBox x:Name="Access" HorizontalAlignment="Left" Height="24" Margin="314,257,0,0" VerticalAlignment="Top" Width="134"/>
         <TextBlock HorizontalAlignment="Left" Height="23" Margin="10,186,0,0" TextWrapping="Wrap" Text="Login Identifier" VerticalAlignment="Top" Width="87"/>
         <TextBlock HorizontalAlignment="Left" Margin="343,225,0,0" TextWrapping="Wrap" Text="Access Level" VerticalAlignment="Top" Width="77"/>

@@ -21,7 +21,8 @@ namespace EmployeeApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Employee> a;
+        List<Employee> a, previous;
+        string p;
         public MainWindow()
         {
             InitializeComponent();
@@ -30,10 +31,6 @@ namespace EmployeeApp
             Sort.ItemsSource = ((App)Application.Current).sort;
             Parameters.ItemsSource = ((App)Application.Current).search;
             //Debug.WriteLine(a[0].FirstName);
-            for (int i = 0; i < a.Count; i++)
-            {
-                NameBox.Items.Add(a[i].FirstName + " " + a[i].LastName);
-            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -69,6 +66,52 @@ namespace EmployeeApp
             {
                 MessageBox.Show("Please select a name from the list to edit", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+        }
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            NameBox.Items.Clear();
+            if (Parameters.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a parameter from the list to search", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            else
+            {
+                if (Search.Text.Length < 1)
+                {
+                    a = ((App)Application.Current).employeeList;
+                }
+                else if (p != null && p.Length > Search.Text.Length && previous != null)
+                {
+                    p = Search.Text;
+                    a = ((App)Application.Current).Search(Search.Text, Parameters.Text, previous);
+                    previous = a;
+                }
+                else
+                {
+                    p = Search.Text;
+                    previous = a;
+                    a = ((App)Application.Current).Search(Search.Text, Parameters.Text, previous);
+                }
+
+                for (int i = 0; i < a.Count; i++)
+                {
+                    NameBox.Items.Add(a[i].FirstName + " " + a[i].LastName);
+                }
+            }
+        }
+
+        private void Sort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
+            NameBox.Items.Clear();
+            a = ((App)Application.Current).Sort(a, Sort.SelectedItem.ToString());
+            for (int i = 0; i < a.Count; i++)
+            {
+                NameBox.Items.Add(a[i].FirstName + " " + a[i].LastName);
+            }
+           
         }
 
         private void Button_Click_Delete(object sender, RoutedEventArgs e)

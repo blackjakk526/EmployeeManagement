@@ -1,1 +1,92 @@
-{ "count": 3, "Employees": [{"LastName":"Gounley","LogId":"agounley","Birthday":"05/26","Email":"agounley@gmail.com","Phone":"7176507175","AccessLevel":"Super","FirstName":"Alan","Id":1},{"LastName":"Hadley","LogId":"bhadley","Birthday":"10/31","Email":"bhadley@gmail.com","Phone":"7171234567","AccessLevel":"Advanced","FirstName":"Boo","Id":2}] }
+{ "count": 10, "Employees": [
+  {
+    "LastName": "Gounley",
+    "LogId": "agounley",
+    "Birthday": "00/00",
+    "Email": "agounley@gmail.com",
+    "Phone": "71798765432",
+    "AccessLevel": "Super",
+    "FirstName": "Alan",
+    "Id": 1
+  },
+  {
+    "LastName": "Hadley",
+    "LogId": "bhadley",
+    "Birthday": "10/31",
+    "Email": "bhadley@gmail.com",
+    "Phone": "7171234567",
+    "AccessLevel": "Advanced",
+    "FirstName": "Boo",
+    "Id": 2
+  },
+  {
+    "LastName": "Mark",
+    "LogId": "amark",
+    "Birthday": "12/31",
+    "Email": "amark@gmail.com",
+    "Phone": "7172350000",
+    "AccessLevel": "Standard",
+    "FirstName": "Adam",
+    "Id": 3
+  },
+  {
+    "LastName": "Rogers",
+    "LogId": "srogers",
+    "Birthday": "07/04",
+    "Email": "srogers@gmail.com",
+    "Phone": "7172270000",
+    "AccessLevel": "Administrator",
+    "FirstName": "Steve",
+    "Id": 4
+  },
+  {
+    "LastName": "Banner",
+    "LogId": "bbanner",
+    "Birthday": "06/30",
+    "Email": "bbanner@gmail.com",
+    "Phone": "7177640000",
+    "AccessLevel": "Advanced",
+    "FirstName": "Bruce ",
+    "Id": 5
+  },
+  {
+    "LastName": "Parker",
+    "LogId": "pparker",
+    "Birthday": "01/15",
+    "Email": "pparker@gmail.com",
+    "Phone": "7174120000",
+    "AccessLevel": "Advanced",
+    "FirstName": "Peter",
+    "Id": 6
+  },
+  {
+    "LastName": "Richards",
+    "LogId": "rrichards",
+    "Birthday": "04/01",
+    "Email": "rrichards@gmail.com",
+    "Phone": "7178430000",
+    "AccessLevel": "Super",
+    "FirstName": "Reed",
+    "Id": 7
+  },
+  {
+    "LastName": "Ant",
+    "LogId": "aant",
+    "Birthday": "01/01",
+    "Email": "aant@gmail.com",
+    "Phone": "7175555555",
+    "AccessLevel": "Standard",
+    "FirstName": "Adam",
+    "Id": 8
+  },
+  {
+    "LastName": "Stark",
+    "LogId": "tstark",
+    "Birthday": "08/15",
+    "Email": "iamironman@gmail.com",
+    "Phone": "7177177177",
+    "AccessLevel": "Super",
+    "FirstName": "Tony",
+    "Id": 9
+  }
+] }
